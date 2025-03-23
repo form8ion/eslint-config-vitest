@@ -38,7 +38,7 @@ $ npm install @form8ion/eslint-config-vitest --save-dev
 ### Example
 
 ```javascript
-export default {
+module.exports = {
   extends: [
     '@form8ion',
     '@form8ion/vitest'
