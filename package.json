@@ -3,41 +3,46 @@
   "description": "shareable config for ESLint for Vitest test files",
   "license": "MIT",
   "version": "0.0.0-semantically-released",
-  "type": "module",
+  "type": "commonjs",
+  "engines": {
+    "node": "^18.19.0 || ^20.9.0 || >=22.11.0"
+  },
   "author": "Matt Travi <npm@travi.org> (https://matt.travi.org)",
   "repository": "form8ion/eslint-config-vitest",
   "bugs": "https://github.com/form8ion/eslint-config-vitest/issues",
   "homepage": "https://npm.im/@form8ion/eslint-config-vitest",
   "runkitExampleFilename": "./example.js",
-  "exports": "./src/index.js",
-  "main": "./src/index.js",
+  "exports": "./index.js",
+  "main": "./index.js",
   "sideEffects": false,
   "scripts": {
-    "clean": "rimraf ./lib",
-    "prebuild": "run-s clean",
-    "lint:lockfile": "lockfile-lint",
     "prepare": "husky",
+    "lint:lockfile": "lockfile-lint",
+    "lint:js": "eslint . --cache",
     "lint:md": "remark . --frail",
     "generate:md": "remark . --output",
     "lint:peer": "npm ls >/dev/null",
     "lint:publish": "publint --strict",
-    "test": "npm-run-all --print-label --parallel lint:*"
+    "test": "npm-run-all --print-label --parallel lint:*",
+    "lint:engines": "ls-engines"
   },
   "files": [
     "example.js",
-    "src/"
+    "index.js"
   ],
   "publishConfig": {
     "access": "public",
     "provenance": true
   },
-  "packageManager": "npm@10.9.0",
+  "packageManager": "npm@11.2.0+sha512.3dc9c50ba813a3d54393155a435fe66404b72685ab0e3008f9ae9ed8d81f6104860f07ed2656dd5748c1322d95f3140fa9b19c59a6bba7750fd12285f81866da",
   "devDependencies": {
     "@form8ion/commitlint-config": "2.0.5",
+    "@form8ion/eslint-config": "7.0.12",
     "@form8ion/remark-lint-preset": "6.0.7",
     "cz-conventional-changelog": "3.3.0",
     "husky": "9.1.7",
     "lockfile-lint": "4.14.0",
+    "ls-engines": "0.9.3",
     "npm-run-all2": "7.0.2",
     "publint": "0.3.9",
     "remark-cli": "12.0.1",

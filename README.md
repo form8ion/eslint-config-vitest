@@ -25,19 +25,20 @@ shareable config for ESLint for Vitest test files
 [![npm][npm-badge]][npm-link]
 [![Try @form8ion/eslint-config-vitest on RunKit][runkit-badge]][runkit-link]
 [![license][license-badge]][license-link]
+![node][node-badge]
 
 <!--consumer-badges end -->
 
 ### Installation
 
 ```sh
-$ npm install @form8ion/eslint-config-vitest
+$ npm install @form8ion/eslint-config-vitest --save-dev
 ```
 
 ### Example
 
 ```javascript
-export default {
+module.exports = {
   extends: [
     '@form8ion',
     '@form8ion/vitest'
@@ -107,3 +108,5 @@ $ npm test
 [license-link]: LICENSE
 
 [license-badge]: https://img.shields.io/github/license/form8ion/eslint-config-vitest.svg?logo=opensourceinitiative
+
+[node-badge]: https://img.shields.io/node/v/@form8ion/eslint-config-vitest?logo=node.js
