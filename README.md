@@ -31,7 +31,7 @@ shareable config for ESLint for Vitest test files
 ### Installation
 
 ```sh
-$ npm install @form8ion/eslint-config-vitest
+$ npm install @form8ion/eslint-config-vitest --save-dev
 ```
 
 ### Example
