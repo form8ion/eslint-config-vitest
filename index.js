@@ -5,7 +5,8 @@ module.exports = {
       {
         ignore: [
           'vitest/config',
-          'vitest-when'
+          'vitest-when',
+          'got'
         ]
       }
     ]
